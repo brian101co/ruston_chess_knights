@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     M.Slider.init(SliderElem);
-
     M.Collapsible.init(FAQAccordianEl, {
         onOpenStart: function (listElem) {
         listElem.querySelector(".caret").innerHTML =
