@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+}
+p {
+    font-size: 1.2rem;
+}
+nav .brand-logo {
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+}
+.menu-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#mobile-nav {
+    top: auto !important;
+    position: fixed;
+    bottom: 5rem;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%) scaleZ(0);
+    transition: opacity 300ms, transform 300ms;
+}
+#mobile-nav.open {
+    display: block;
+    transform: translateX(-50%) scaleZ(1);
+}
+.hero-container {
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("/assets/imgs/hero_banner.webp");
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assets/imgs/hero_banner.webp");
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assets/imgs/hero_banner.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero-title {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+}
+.hero-text {
+    margin: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+}
+.hero-cta {
+    margin-top: 1.5rem;
+}
+.wtfu-map-wrapper {
+    padding-top: 1rem;
+}
+.wtfu-title {
+    font-size: 3rem;
+}
+.faq-title,
+.join-the-convo-title,
+.what-to-expect-title {
+    margin-top: 0;
+    font-size: 3rem;
+}
+.join-the-convo-cta {
+    z-index: 0;
+}
+.faq-accordion {
+    margin-top: 1.3rem;
+}
+.faq-accordion .collapsible-header,
+.faq-accordion .collapsible-body {
+    font-size: 1.2rem;
+}
+.caret {
+    padding-right: 1rem;
+}
+.copyright-year {
+    margin: 0 0.4rem;
+}
+.slider .indicators .indicator-item.active {
+	background-color: #03a9f4;
+}
+
+@media screen and (min-width: 40rem) {
+    .hero-container {
+        background: linear-gradient(to bottom, rgba(41, 182, 246, 0), rgba(41, 182, 246, 0.3) 70%), url("/assets/imgs/hero_banner.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .hero-title,
+    .hero-text {
+        text-shadow: 1px 1px rgb(32, 32, 32);
+    }
+    .wtfu-map-wrapper {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 100000;
+    }
+    nav .brand-logo {
+        font-size: 1.8rem;
+        width: unset;
+    }
+}
