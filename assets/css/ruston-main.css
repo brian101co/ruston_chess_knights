@@ -22,7 +22,7 @@ nav .brand-logo {
 #mobile-nav {
     top: auto !important;
     position: fixed;
-    bottom: 5rem;
+    bottom: 6.5rem;
     width: 200px;
     left: 50%;
     transform: translateX(-50%) scaleZ(0);
@@ -93,8 +93,20 @@ nav .brand-logo {
 .faq-accordion .collapsible-body {
     font-size: 1.2rem;
 }
+.collapsible-header {
+    align-items: center;
+}
+
 .caret {
-    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    transition: transform 300ms;
+}
+
+.caret.open {
+    transform: rotate(90deg);
+    transform-origin: center center;
 }
 .copyright-year {
     margin: 0 0.4rem;

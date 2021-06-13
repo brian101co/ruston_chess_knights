@@ -32,15 +32,15 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         open() {
             this.state.isOpen = true;
-            this.trigger.innerHTML =
-              '<img src="assets/imgs/close.svg" alt="Close Menu" aria-label="Close Menu">';
+            this.trigger.querySelector('[alt="Open Menu"]').classList.toggle("hide");
+            this.trigger.querySelector('[alt="Close Menu"]').classList.toggle("hide");
             this.el.classList.add("open");
             this.transitionIn();
         },
         close() {
             this.state.isOpen = false;
-            this.trigger.innerHTML =
-              '<img src="assets/imgs/hamburger.svg" alt="Open Menu" aria-label="Open Menu">';
+            this.trigger.querySelector('[alt="Open Menu"]').classList.toggle("hide");
+            this.trigger.querySelector('[alt="Close Menu"]').classList.toggle("hide");
             this.transitionOut();
             const self = this;
             setTimeout(function() {
@@ -52,12 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
     M.Slider.init(SliderElem);
     M.Collapsible.init(FAQAccordianEl, {
         onOpenStart: function (listElem) {
-        listElem.querySelector(".caret").innerHTML =
-            '<img src="assets/imgs/caret-down.svg" alt="Tab Open Icon">';
+            listElem.querySelector(".caret").classList.toggle("open");
         },
         onCloseStart: function (listElem) {
-        listElem.querySelector(".caret").innerHTML =
-            '<img src="assets/imgs/caret-right.svg" alt="Tab Closed Icon">';
+            listElem.querySelector(".caret").classList.toggle("open");
         },
     });
     
