@@ -73,6 +73,13 @@ nav .brand-logo {
 }
 .wtfu-map-wrapper {
     padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wtfu-map-wrapper iframe {
+    width: 100%;
+    height: 100%;
 }
 .wtfu-title {
     font-size: 3rem;
